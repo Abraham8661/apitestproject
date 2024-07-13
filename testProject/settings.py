@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+    "https://apitestproject.onrender.com/"
+    # Add any other origins you need to allow
+]
+
+
 
 # Application definition
 
@@ -40,11 +47,13 @@ INSTALLED_APPS = [
 
     #App
     'rest_framework',
+    'corsheaders',
     'Blog',
     'api'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
