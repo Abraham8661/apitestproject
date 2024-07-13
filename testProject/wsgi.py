@@ -12,7 +12,7 @@ from django.core.wsgi import get_wsgi_application
 from whitenoise import WhiteNoise
 from pathlib import Path
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project_name.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'testProject.settings')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
